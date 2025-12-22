@@ -1,0 +1,89 @@
+.info-container {
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+}
+
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-card-label {
+  font-size: var(--text-size-caption);
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.info-card-value {
+  font-size: calc(var(--text-size-heading) - 0.125rem);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.info-card-value.pending {
+  color: #f59e0b;
+}
+
+.info-card-value.in-progress {
+  color: #3b82f6;
+}
+
+.info-card-value.completed {
+  color: #10b981;
+}
+
+.info-action-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info-add-button {
+  padding: 0.5rem 0.5rem;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: var(--text-size-caption);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.info-add-button:hover {
+  background: #2563eb;
+}
+
+.info-sort-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.info-sort-label {
+  font-size: var(--text-size-caption);
+  font-weight: 500;
+}
+
+.info-sort-select {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: var(--text-size-caption);
+  cursor: pointer;
+  background: #fff;
+}

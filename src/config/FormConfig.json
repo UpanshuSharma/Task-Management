@@ -1,0 +1,75 @@
+{
+    "id": "FORM_CONFIG",
+    "type": "SECTION",
+    "fields": [
+        {
+            "id": "title",
+            "label": "Title",
+            "type": "text",
+            "placeholder": "Enter Title",
+            "value": "",
+            "metadata": {
+                "validator": {
+                    "required": true,
+                    "minLength": 3,
+                    "maxLength": 20
+                }
+            }
+        },
+        {
+            "id": "description",
+            "label": "Description",
+            "type": "text",
+            "placeholder": "Enter Description ",
+            "value": "",
+            "metadata": {
+                "validator": {
+                    "required": true,
+                    "minLength": 5,
+                    "maxLength": 100
+                }
+            }
+        },
+        {
+            "id": "status",
+            "label": "Status",
+            "type": "select",
+            "placeholder": "Select Status",
+            "value": "",
+            "options": [
+                {
+                    "label": "Select Status",
+                    "value": ""
+                },
+                {
+                    "label": "Pending",
+                    "value": "PENDING"
+                },
+                {
+                    "label": "In Progress",
+                    "value": "IN_PROGRESS"
+                },
+                {
+                    "label": "Completed",
+                    "value": "COMPLETED"
+                }
+            ],
+            "metadata": {
+                "validator": {
+                    "required": true
+                }
+            }
+        },
+        {
+            "id": "dueDate",
+            "type": "date",
+            "label": "Due Date",
+            "metadata": {
+                "validator": {
+                    "required": true,
+                    "notBefore": "today"
+                }
+            }
+        }
+    ]
+}

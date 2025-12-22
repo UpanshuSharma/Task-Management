@@ -1,0 +1,120 @@
+/* Form Field Wrapper */
+.form-field {
+    margin-bottom: 1.5rem;
+}
+
+/* Label Styles */
+.form-field__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    font-size: var(--text-size-body);
+}
+
+.form-field__required {
+    color: #e74c3c;
+    margin-left: 3px;
+}
+
+/* Text Input & Select Base */
+.form-input {
+    width: 100%;
+    padding: 0.75rem 0.9375rem;
+    border-radius: 8px;
+    font-size: var(--text-size-body);
+    transition: all 0.3s ease;
+    font-family: var(--font-family-base);
+    box-sizing: border-box;
+    display: block;
+    color: var(--color-text-primary);
+    background: var(--surface-background-primary);
+}
+
+.form-input--default {
+    border: 2px solid rgba(0,0,0,0.08);
+}
+
+.form-input--error {
+    border: 2px solid #e74c3c;
+}
+
+.form-input--valid {
+    border: 2px solid #27ae60;
+}
+
+/* Select Field */
+.form-select {
+    cursor: pointer;
+    background-color: white;
+}
+
+/* Character Count */
+.form-field__char-count {
+    font-size: var(--text-size-caption);
+    color: var(--color-text-muted);
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
+/* Error Message */
+.form-field__error {
+    color: #e74c3c;
+    font-size: var(--text-size-caption);
+    margin-top: 0.25rem;
+    min-height: 0;
+}
+
+.form-field__error--visible {
+    min-height: auto;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--text-size-body);
+    font-weight: 600;
+    margin-top: 0.625rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.submit-btn--enabled {
+    background: #3b82f6;
+}
+
+.submit-btn--enabled:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn--disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Submit Message */
+.submit-message {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: var(--text-size-body);
+    font-weight: 500;
+}
+
+.submit-message--success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.submit-message--error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

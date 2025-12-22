@@ -1,0 +1,144 @@
+/* =========================================================
+   NAVBAR BASE
+   ========================================================= */
+
+.navbar {
+    background: linear-gradient(180deg, var(--surface-background-primary), #f7f7f7);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    position: relative;
+    color: var(--color-text-primary);
+    font-family: var(--font-family-base);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+}
+
+/* =========================================================
+     MENU BUTTON (MOBILE)
+     ========================================================= */
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* =========================================================
+     NAV LINKS (MOBILE FIRST)
+     ========================================================= */
+
+.nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    border-bottom: 1px solid #ddd;
+
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.nav-links.open {
+    max-height: 300px;
+    padding: 1rem;
+}
+
+/* =========================================================
+     NAV LINK STYLES + INTERACTIONS
+     ========================================================= */
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: 500;
+    padding: 0.25rem 0;
+    transition: color 0.025s ease;
+    font-size: var(--text-size-body);
+}
+
+/* Hover / focus / active color */
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active {
+    color: #ff7a00;
+}
+
+/* Underline (no layout shift) */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+
+    width: 100%;
+    height: 2px;
+    background-color: #ff7a00;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+/* Show underline */
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+/* =========================================================
+     TABLET & DESKTOP
+     ========================================================= */
+
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .navbar {
+        position: static;
+    }
+
+    .nav-container {
+        /* Remove extra margin so navbar spacing is uniform across breakpoints */
+        margin: 0;
+    }
+
+    .nav-links {
+        position: static;
+
+        max-height: none;
+        overflow: visible;
+
+        flex-direction: row;
+        gap: 2rem;
+
+        padding: 0;
+        border: none;
+        width: auto;
+        background: transparent;
+    }
+
+    /* Slightly lower underline on desktop */
+    .nav-links a::after {
+        bottom: -5px;
+    }
+}

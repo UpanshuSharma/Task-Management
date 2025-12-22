@@ -1,0 +1,133 @@
+.task-card {
+    background: var(--surface-background-primary);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    color: var(--color-text-primary);
+    font-family: var(--font-family-base);
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.task-card--PENDING {
+    border-left-color: #ff9800;
+}
+
+.task-card--IN_PROGRESS {
+    border-left-color: #2196f3;
+}
+
+.task-card--COMPLETED {
+    border-left-color: #4caf50;
+    opacity: 0.95;
+}
+
+.task-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.task-card__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-card__title {
+    margin: 0 0 0.5rem 0;
+    font-size: var(--text-size-title);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    word-break: break-word;
+}
+
+.task-card__description {
+    margin: 0;
+    font-size: var(--text-size-body);
+    line-height: var(--line-height-body);
+    color: var(--color-text-secondary);
+    word-break: break-word;
+}
+
+.task-card__actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.task-card__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.375rem 0.5rem;
+    font-size: var(--text-size-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.task-card__btn:hover {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    transform: scale(1.05);
+}
+
+.task-card__btn:active {
+    transform: scale(0.95);
+}
+
+.task-card__edit-btn {
+    color: #2196f3;
+}
+
+.task-card__delete-btn {
+    color: #f44336;
+}
+
+.task-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.task-card__due-date {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+.task-card__status {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.task-card__status--PENDING {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.task-card__status--IN_PROGRESS {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.task-card__status--COMPLETED {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
