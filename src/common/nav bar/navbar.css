@@ -1,10 +1,6 @@
-/* =========================================================
-   NAVBAR BASE
-   ========================================================= */
-
 .navbar {
     background: linear-gradient(180deg, var(--surface-background-primary), #f7f7f7);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     position: relative;
     color: var(--color-text-primary);
     font-family: var(--font-family-base);
@@ -17,9 +13,7 @@
     padding: 0.75rem 1rem;
 }
 
-/* =========================================================
-     MENU BUTTON (MOBILE)
-     ========================================================= */
+
 
 .menu-btn {
     background: none;
@@ -29,9 +23,7 @@
     line-height: 1;
 }
 
-/* =========================================================
-     NAV LINKS (MOBILE FIRST)
-     ========================================================= */
+
 
 .nav-links {
     position: absolute;
@@ -59,9 +51,7 @@
     padding: 1rem;
 }
 
-/* =========================================================
-     NAV LINK STYLES + INTERACTIONS
-     ========================================================= */
+
 
 .nav-links a {
     position: relative;
@@ -104,9 +94,6 @@
     transform: scaleX(1);
 }
 
-/* =========================================================
-     TABLET & DESKTOP
-     ========================================================= */
 
 @media (min-width: 768px) {
     .menu-btn {
@@ -118,7 +105,7 @@
     }
 
     .nav-container {
-        /* Remove extra margin so navbar spacing is uniform across breakpoints */
+
         margin: 0;
     }
 
@@ -137,7 +124,7 @@
         background: transparent;
     }
 
-    /* Slightly lower underline on desktop */
+
     .nav-links a::after {
         bottom: -5px;
     }

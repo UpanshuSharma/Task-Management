@@ -44,7 +44,6 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, title, initialValues = {},
                     <DynamicForm
                         config={formConfig as FormConfig}
                         initialValues={initialValues}
-                        // onSubmit={(data: FormData) => console.log(data)}
                         onSubmit={handleSubmit}
                     />
                 </div>

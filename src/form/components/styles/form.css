@@ -3,7 +3,7 @@
     margin-bottom: 1.5rem;
 }
 
-/* Label Styles */
+
 .form-field__label {
     display: block;
     margin-bottom: 0.5rem;
@@ -17,7 +17,7 @@
     margin-left: 3px;
 }
 
-/* Text Input & Select Base */
+
 .form-input {
     width: 100%;
     padding: 0.75rem 0.9375rem;
@@ -32,7 +32,7 @@
 }
 
 .form-input--default {
-    border: 2px solid rgba(0,0,0,0.08);
+    border: 2px solid rgba(0, 0, 0, 0.08);
 }
 
 .form-input--error {
@@ -49,7 +49,7 @@
     background-color: white;
 }
 
-/* Character Count */
+
 .form-field__char-count {
     font-size: var(--text-size-caption);
     color: var(--color-text-muted);
@@ -57,7 +57,7 @@
     margin-top: 0.25rem;
 }
 
-/* Error Message */
+
 .form-field__error {
     color: #e74c3c;
     font-size: var(--text-size-caption);
@@ -69,7 +69,7 @@
     min-height: auto;
 }
 
-/* Submit Button */
+
 .submit-btn {
     width: 100%;
     padding: 0.75rem;
@@ -98,7 +98,7 @@
     cursor: not-allowed;
 }
 
-/* Submit Message */
+
 .submit-message {
     padding: 0.75rem 1rem;
     border-radius: 8px;

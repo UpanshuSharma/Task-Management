@@ -18,7 +18,6 @@ export const useFormState = (
     const [formData, setFormData] = useState<FormData>(() => {
         const initialData: FormData = {};
         formConfig.fields.forEach(field => {
-            // Priority: initialValues > field.value > empty string
             initialData[field.id] = initialValues[field.id] !== undefined
                 ? initialValues[field.id]
                 : field.value;

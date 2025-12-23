@@ -74,8 +74,6 @@ export const FormField: React.FC<FormFieldProps> = ({
                         {String(value).length} / {field.metadata.validator.maxLength}
                     </div>
                 )}
-
-            {/* Error message */}
             <div className={`form-field__error ${(touched && error) ? 'form-field__error--visible' : ''}`}>
                 {touched && error && error}
             </div>

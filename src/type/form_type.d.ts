@@ -8,9 +8,9 @@ export interface ValidationRule {
     max?: number;
     pattern?: string;
     mustBeTrue?: boolean;
-    minDate?: string; // ISO date string or 'today'
-    maxDate?: string; // ISO date string or 'today'
-    notBefore?: string; // 'today' - date cannot be before today
+    minDate?: string;
+    maxDate?: string;
+    notBefore?: string;
     notAfter?: string
 }
 
