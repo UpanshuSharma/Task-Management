@@ -18,11 +18,20 @@ const TaskList: React.FC = () => {
     }
   },[pathname])
     return (
-        <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}>
+      <>
+        {taskList.length === 0 ? (
+          <div style={{ padding: '24px', textAlign: 'center', color: '#666' }}>
+            <h3 style={{ margin: 0 }}>No tasks</h3>
+            <p style={{ marginTop: 8 }}>There are no tasks to display.</p>
+          </div>
+        ) : (
+          <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}>
             {taskList.map(task => (
-                <TaskCard key={task.id} task={task}  />
+              <TaskCard key={task.id} task={task}  />
             ))}
-        </div>
+          </div>
+        )}
+      </>
     )
 }
 
